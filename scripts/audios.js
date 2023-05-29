@@ -9,7 +9,7 @@ Flapping.volume = 0.1;
 Point.volume = 0.01;
 Notification.volume = 1;
 const audios = [Notification, Flapping, WarnAlarm, Crow, Point];
-audios.forEach((audio) => audio.load());
+audios.forEach((audio) => (audio.muted = true));
 export function pause() {
     for (let audio of audios) {
         if (audio.currentTime !== 0 && audio.currentTime !== audio.duration) {
