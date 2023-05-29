@@ -12,8 +12,9 @@ Point.volume = 0.01;
 Notification.volume = 1;
 
 const audios = [Notification, Flapping, WarnAlarm, Crow, Point];
-
-audios.forEach((audio) => (audio.muted = true));
+if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream) {
+  audios.forEach((audio) => (audio.muted = true));
+}
 
 export function pause() {
   for (let audio of audios) {
