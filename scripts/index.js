@@ -14,7 +14,7 @@ const game = new Game(canvas.width, canvas.height);
 const character = new Character(innerHeight / 2);
 const birdSprite = new Sprite(Array(9)
     .fill(0)
-    .map((_, i) => loadImage("./../assets/bird/n" + (i + 1) + ".png")));
+    .map((_, i) => loadImage("./assets/bird/n" + (i + 1) + ".png")));
 let growthOfGameOverDisplay = 0;
 function main() {
     initController(canvas, game, character);
