@@ -1,4 +1,4 @@
-const AUDIOS_DIR = "./../assets/audios/";
+const AUDIOS_DIR = "./assets/audios/";
 export const Notification = new Audio(AUDIOS_DIR + "notification.mp3");
 export const WarnAlarm = new Audio(AUDIOS_DIR + "warnAlarm.mp3");
 export const Flapping = new Audio(AUDIOS_DIR + "flapping.mp3");

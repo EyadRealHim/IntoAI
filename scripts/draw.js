@@ -1,6 +1,6 @@
 import { config } from "./game.js";
 import loadImage from "./utils/loadImage.js";
-const ImagesPath = "./../assets/";
+const ImagesPath = "./assets/";
 const BACKGROUND_IMAGE = loadImage(ImagesPath + "background.png");
 const IDLER_PULLEY_IMAGE = loadImage(ImagesPath + "idlerPulley.png");
 const BLET_IMAGE = loadImage(ImagesPath + "belt.png");
