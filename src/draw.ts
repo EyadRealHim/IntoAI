@@ -16,7 +16,7 @@ export interface Shape {
   center?: boolean;
 }
 
-const ImagesPath = "./../assets/";
+const ImagesPath = "./assets/";
 
 const BACKGROUND_IMAGE = loadImage(ImagesPath + "background.png");
 
