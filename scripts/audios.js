@@ -34,7 +34,7 @@ export function play(audio) {
             await audio.play();
         }
         catch (e) {
-            alert(e.message);
+            console.error(e);
             resolve();
         }
     });
