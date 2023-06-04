@@ -40,7 +40,7 @@ export function play(audio: HTMLAudioElement) {
       audio.currentTime = 0;
       await audio.play();
     } catch (e: any) {
-      alert(e.message);
+      console.error(e);
       resolve();
     }
   });

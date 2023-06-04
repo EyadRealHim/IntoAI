@@ -24,7 +24,7 @@ export default function initController(canvas, game, character) {
                 window.location.reload();
             else
                 startGame(game);
-            aboutDiv.className = "display-out";
+            hideAbout();
         }
     });
     enterGameButton.addEventListener("click", function () {
@@ -37,7 +37,7 @@ export default function initController(canvas, game, character) {
     document.addEventListener("click", (event) => {
         if (!aboutDiv.contains(event.target) &&
             event.target != aboutGameButton) {
-            aboutDiv.className = "display-out";
+            hideAbout();
         }
     });
     KeyInterval(["w", "ArrowUp"], () => {
@@ -93,4 +93,10 @@ export function showInfo(content) {
 export function hideInfo() {
     infoDiv.classList.remove("fade-in");
     infoDiv.classList.add("fade-out");
+}
+export function hideAbout() {
+    aboutDiv.className = "display-out";
+    aboutDiv.onanimationend = function () {
+        aboutDiv.style.display = "none";
+    };
 }

@@ -40,7 +40,7 @@ export default function initController(
       if (game.gameover) window.location.reload();
       else startGame(game);
 
-      aboutDiv.className = "display-out";
+      hideAbout();
     }
   });
 
@@ -58,7 +58,7 @@ export default function initController(
       !aboutDiv.contains(event.target as Node) &&
       event.target != aboutGameButton
     ) {
-      aboutDiv.className = "display-out";
+      hideAbout();
     }
   });
 
@@ -138,4 +138,11 @@ export function showInfo(content: string) {
 export function hideInfo() {
   infoDiv.classList.remove("fade-in");
   infoDiv.classList.add("fade-out");
+}
+
+export function hideAbout() {
+  aboutDiv.className = "display-out";
+  aboutDiv.onanimationend = function () {
+    aboutDiv.style.display = "none";
+  };
 }
